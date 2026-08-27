@@ -1,0 +1,141 @@
+@import "tailwindcss";
+
+:root {
+  --radius: 1rem;
+
+  /* Waypoint palette — "boarding pass" travel aesthetic.
+     Warm paper ivory, deep ink navy, petrol teal + mustard gold accents. */
+  --background: #faf7f1;
+  --foreground: #1c2530;
+
+  --card: #ffffff;
+  --card-foreground: #1c2530;
+
+  --popover: #ffffff;
+  --popover-foreground: #1c2530;
+
+  --primary: #1f6f66;
+  --primary-foreground: #faf7f1;
+
+  --secondary: #efe7d8;
+  --secondary-foreground: #1c2530;
+
+  --muted: #f0ece2;
+  --muted-foreground: #6b6459;
+
+  --accent: #c98a2c;
+  --accent-foreground: #2a1c06;
+
+  --destructive: #b3261e;
+  --destructive-foreground: #faf7f1;
+
+  --border: #ddd6c7;
+  --input: #ddd6c7;
+  --ring: #1f6f66;
+}
+
+.dark {
+  --background: #10161c;
+  --foreground: #f5f1e6;
+
+  --card: #161e27;
+  --card-foreground: #f5f1e6;
+
+  --popover: #161e27;
+  --popover-foreground: #f5f1e6;
+
+  --primary: #3fa79c;
+  --primary-foreground: #10161c;
+
+  --secondary: #202a33;
+  --secondary-foreground: #f5f1e6;
+
+  --muted: #202a33;
+  --muted-foreground: #9aa3ab;
+
+  --accent: #d9a24b;
+  --accent-foreground: #241a06;
+
+  --destructive: #e5847c;
+  --destructive-foreground: #10161c;
+
+  --border: #2a343e;
+  --input: #2a343e;
+  --ring: #3fa79c;
+}
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  --font-display: var(--font-display-family);
+  --font-sans: var(--font-sans-family);
+  --font-mono: var(--font-mono-family);
+}
+
+:root {
+  --font-display-family: var(--font-dm-sans), -apple-system,
+    BlinkMacSystemFont, "Segoe UI", ui-sans-serif, Helvetica, Arial,
+    sans-serif;
+  --font-sans-family: var(--font-dm-sans), -apple-system, BlinkMacSystemFont,
+    "Segoe UI", ui-sans-serif, Helvetica, Arial, sans-serif;
+  --font-mono-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+}
+
+* {
+  border-color: var(--border);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans-family);
+}
+
+/* Perforated "tear line" between the stub and the body of a boarding-pass card */
+.tear-line {
+  position: relative;
+  border: none;
+  border-top: 2px dashed var(--border);
+}
+
+.tear-line::before,
+.tear-line::after {
+  content: "";
+  position: absolute;
+  top: -10px;
+  width: 20px;
+  height: 20px;
+  border-radius: 9999px;
+  background: var(--background);
+}
+
+.tear-line::before {
+  left: -10px;
+}
+
+.tear-line::after {
+  right: -10px;
+}
