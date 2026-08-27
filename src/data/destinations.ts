@@ -284,6 +284,50 @@ export const destinations: Destination[] = [
       author: "Elena V.",
     },
   },
+    {
+    slug: "jaipur-india",
+    code: "JAI",
+    name: "Jaipur",
+    region: "India",
+    tagline: "Pink sandstone forts and a city planned like a mandala",
+    blurb:
+      "India's Pink City, laid out in the 18th century with startling precision — palaces, stepwells, and bazaars still following the same grid, all in the same warm terracotta stone.",
+    priceFrom: 590,
+    days: 4,
+    bestTime: "October to March",
+    tags: ["culture", "budget-friendly", "walkable"],
+    image: "https://picsum.photos/seed/jaipur-waypoint/1200/800",
+    gallery: [
+      "https://picsum.photos/seed/jaipur-waypoint-1/900/700",
+      "https://picsum.photos/seed/jaipur-waypoint-2/900/700",
+      "https://picsum.photos/seed/jaipur-waypoint-3/900/700",
+    ],
+    itinerary: [
+      {
+        day: "Day 1",
+        title: "Amber Fort at sunrise",
+        description:
+          "Beat the heat and the crowds at the hilltop fort, then explore the City Palace complex in the afternoon.",
+      },
+      {
+        day: "Day 2",
+        title: "Old city bazaars",
+        description:
+          "Wander Johari Bazaar and Bapu Bazaar for block-printed textiles and gemstones, pausing at Hawa Mahal along the way.",
+      },
+      {
+        day: "Day 3",
+        title: "Jantar Mantar and stepwells",
+        description:
+          "Tour the 18th-century astronomical observatory, then visit the geometric stepwell at Panna Meena ka Kund.",
+      },
+    ],
+    testimonial: {
+      quote:
+        "Every wall in the old city is the same shade of pink — it stops feeling like a coincidence and starts feeling like a decision.",
+      author: "Kabir S.",
+    },
+  },
 ];
 
 export function getDestination(slug: string) {
