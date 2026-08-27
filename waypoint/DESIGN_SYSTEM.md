@@ -87,7 +87,8 @@ Only `shadow-sm` by default; `shadow-md` on hover for interactive cards
 | `accent` | Rare — a single moment of gold emphasis ("Plan this trip") |
 | `destructive` | Irreversible/removal actions only (e.g. "Remove destination") |
 
-**Sizes:** `sm` (h-9) · `default` (h-10) · `lg` (h-11) · `icon` (square, h-10 w-10).
+**Sizes:** `sm` (h-9, 36px — dense/secondary contexts only) · `default` (h-11, 44px)
+· `lg` (h-12, 48px — comfortable primary-CTA touch target) · `icon` (square, h-11 w-11).
 
 **States:** hover (`opacity-90`/background shift per variant), focus-visible
 (2px `ring` + offset), disabled (`opacity-50`, pointer-events none). No loading
@@ -160,7 +161,41 @@ by both the Explore grid and is the visual seed for the detail page hero.
 
 ---
 
-## 6. Adding a new component
+## 6. External influences
+
+Occasionally another product's published design principles are worth studying —
+but studying is not copying. When pulling in an outside reference:
+
+- **Adopt the reasoning, not the brand.** A competitor's exact color, named brand
+  color, or licensed font is off-limits — Waypoint keeps its own palette and type
+  regardless of inspiration source. What's fair game is the underlying *why*: how
+  they think about density, restraint, hierarchy, or accessibility.
+- **Document what was actually taken**, so it's traceable later.
+
+**Airbnb's public DESIGN.md** (reviewed 2026) was the source for one change so far:
+their buttons hold a fixed, generous touch-target height (48px) for primary
+actions — above the WCAG AAA minimum — on the reasoning that "the brand trusts
+[...] generous [sizing]" for comfortable tapping over cramming more on screen.
+Waypoint's `Button` `default` size was `h-10` (40px, under AAA); it's now `h-11`
+(44px, meeting AAA), with `lg` raised to `h-12` (48px) to match Airbnb's number
+for the most important CTAs. No color, font, or layout from that source was
+carried over — Waypoint's palette, type, and shadow/spacing rules stay as
+Section 1–2 define them.
+
+Two more of their principles are worth a look later, as their *own* backlog
+items with a visual check before shipping (not applied here):
+
+- **Tighter vertical rhythm between page sections** than a typical generic
+  layout default, reasoned from needing higher card density per scroll on a
+  browse-heavy page — could apply to the Explore grid's section spacing.
+- **A full-pill search input** (as opposed to the current `rounded-md` box) —
+  worth trying on the Explore page's search bar specifically, not as a
+  system-wide `Input` change, since a pill reads differently against the
+  ticket motif than the filter chips do.
+
+---
+
+## 7. Adding a new component
 
 1. Check this file first — does a variant of an existing component already cover it?
 2. If genuinely new, pull it via `npx shadcn@2.10.0 add <component>` where possible,
