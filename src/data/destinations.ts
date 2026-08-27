@@ -284,8 +284,54 @@ export const destinations: Destination[] = [
       author: "Elena V.",
     },
   },
+    {
+    slug: "mumbai-india",
+    code: "BOM",
+    name: "Mumbai",
+    region: "India",
+    tagline: "Local trains, street food, and art deco by the sea",
+    blurb:
+      "India's maximum city — Gothic and art deco facades along Marine Drive, thali lunches that never end, and a hum that doesn't stop, even well past midnight.",
+    priceFrom: 650,
+    days: 5,
+    bestTime: "November to February",
+    tags: ["food", "culture", "coastal"],
+    image: "https://picsum.photos/seed/mumbai-waypoint/1200/800",
+    gallery: [
+      "https://picsum.photos/seed/mumbai-waypoint-1/900/700",
+      "https://picsum.photos/seed/mumbai-waypoint-2/900/700",
+      "https://picsum.photos/seed/mumbai-waypoint-3/900/700",
+    ],
+    itinerary: [
+      {
+        day: "Day 1",
+        title: "Marine Drive and Colaba",
+        description:
+          "Arrive and walk the curve of Marine Drive at sunset, then explore the Gateway of India and Colaba's art deco cafes.",
+      },
+      {
+        day: "Day 2",
+        title: "Old Bombay on foot",
+        description:
+          "Wander CST station, Crawford Market, and the spice lanes near Mohammed Ali Road before a rooftop dinner.",
+      },
+      {
+        day: "Day 3",
+        title: "Elephanta Caves",
+        description:
+          "Take the ferry out to the 6th-century rock-cut temples on Elephanta Island, then unwind at a Bandra cafe.",
+      },
+    ],
+    testimonial: {
+      quote:
+        "The chaos makes sense after a day or two — then you can't imagine the city any other way.",
+      author: "Rohan D.",
+    },
+  },
+  
 ];
 
 export function getDestination(slug: string) {
   return destinations.find((d) => d.slug === slug);
 }
+//Add Mumbai as a new destination
