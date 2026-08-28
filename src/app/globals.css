@@ -4,8 +4,8 @@
   --radius: 0.5rem;
 
   /* Waypoint palette — "boarding pass" travel aesthetic.
-     Warm paper ivory, deep ink navy, petrol teal + mustard gold accents. */
-  --background: #faf7f1;
+     Neon magenta canvas, deep ink navy, petrol teal + mustard gold accents. */
+  --background: #ff2bd1;
   --foreground: #1c2530;
 
   --card: #ffffff;
@@ -35,7 +35,7 @@
 }
 
 .dark {
-  --background: #10161c;
+  --background: #8a00ff;
   --foreground: #f5f1e6;
 
   --card: #161e27;
