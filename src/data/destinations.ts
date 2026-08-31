@@ -328,6 +328,50 @@ export const destinations: Destination[] = [
       author: "Kabir S.",
     },
   },
+  {
+    slug: "pune-india",
+    code: "PNQ",
+    name: "Pune",
+    region: "India",
+    tagline: "Deccan hill forts and a college town that never quite grew up",
+    blurb:
+      "A Maratha capital turned university city — trekkable basalt forts on the outskirts, Peshwa-era wadas downtown, and a cafe culture built by students who stayed.",
+    priceFrom: 540,
+    days: 4,
+    bestTime: "November to February",
+    tags: ["culture", "budget-friendly", "hiking"],
+    image: "https://picsum.photos/seed/pune-waypoint/1200/800",
+    gallery: [
+      "https://picsum.photos/seed/pune-waypoint-1/900/700",
+      "https://picsum.photos/seed/pune-waypoint-2/900/700",
+      "https://picsum.photos/seed/pune-waypoint-3/900/700",
+    ],
+    itinerary: [
+      {
+        day: "Day 1",
+        title: "Shaniwar Wada and the old peths",
+        description:
+          "Start at the Peshwa fortress ruins, then walk the lanes of Tulshibaug and Laxmi Road for brass, saris, and street food.",
+      },
+      {
+        day: "Day 2",
+        title: "Sinhagad Fort trek",
+        description:
+          "An early climb up the old stone steps for valley views, rewarded with pithla bhakri and jaggery tea at the top.",
+      },
+      {
+        day: "Day 3",
+        title: "Aga Khan Palace and Koregaon Park",
+        description:
+          "Tour the Italianate palace where Gandhi was interned, then spend the evening in the city's leafiest cafe district.",
+      },
+    ],
+    testimonial: {
+      quote:
+        "You come for the forts and leave having spent most of your time in a cafe arguing about them.",
+      author: "Nikhil D.",
+    },
+  },
 ];
 
 export function getDestination(slug: string) {
