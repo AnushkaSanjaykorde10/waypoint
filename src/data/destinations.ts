@@ -372,6 +372,50 @@ export const destinations: Destination[] = [
       author: "Nikhil D.",
     },
   },
+  {
+    slug: "delhi-india",
+    code: "DEL",
+    name: "Delhi",
+    region: "India",
+    tagline: "Mughal monuments and a street food scene that never sleeps",
+    blurb:
+      "Layers of empire stacked on top of each other — Mughal tombs, colonial boulevards, and a walled old city where the smell of frying parathas never quite fades.",
+    priceFrom: 610,
+    days: 4,
+    bestTime: "October to March",
+    tags: ["culture", "food", "walkable"],
+    image: "https://picsum.photos/seed/delhi-waypoint/1200/800",
+    gallery: [
+      "https://picsum.photos/seed/delhi-waypoint-1/900/700",
+      "https://picsum.photos/seed/delhi-waypoint-2/900/700",
+      "https://picsum.photos/seed/delhi-waypoint-3/900/700",
+    ],
+    itinerary: [
+      {
+        day: "Day 1",
+        title: "Humayun's Tomb and Lodhi Gardens",
+        description:
+          "Start at the Mughal tomb that inspired the Taj Mahal, then wind down among the ruins scattered through Lodhi Gardens.",
+      },
+      {
+        day: "Day 2",
+        title: "Old Delhi on foot",
+        description:
+          "Explore Chandni Chowk's lanes, climb Jama Masjid's minaret, and eat your way through the paratha and kebab stalls nearby.",
+      },
+      {
+        day: "Day 3",
+        title: "Qutub Minar and Hauz Khas Village",
+        description:
+          "Tour the 12th-century minaret complex, then spend the evening among the boutiques and rooftop cafes of Hauz Khas.",
+      },
+    ],
+    testimonial: {
+      quote:
+        "Every neighborhood feels like a different century — and somehow they're all a ten-minute drive apart.",
+      author: "Meera J.",
+    },
+  },
 ];
 
 export function getDestination(slug: string) {
