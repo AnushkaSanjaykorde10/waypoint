@@ -1,5 +1,6 @@
 import { destinations } from "@/data/destinations";
 import { ExploreGrid } from "@/components/explore-grid";
+import { WorldMap } from "@/components/world-map";
 
 export default function Home() {
   return (
@@ -22,6 +23,8 @@ export default function Home() {
       <section className="mx-auto max-w-6xl px-6 py-14">
         <ExploreGrid destinations={destinations} />
       </section>
+
+      <WorldMap />
     </main>
   );
 }
